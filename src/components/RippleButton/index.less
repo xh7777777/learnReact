@@ -1,0 +1,41 @@
+.ripple-btn {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .btn {
+        position: relative;
+        padding: 20px 30px;
+        font-size: 20px;
+        font-weight: 500;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        background-image: linear-gradient(rgb(43,190,96),rgb(15,157,88));
+        color: #000;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .btn::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        transform: translate(-50%,-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+        border-radius: 50%;
+        transition: width 0.5s, height 0.5s;
+    }
+    .btn:hover::before {
+        height: 400px;
+        width: 400px;
+    }
+
+    .btn:hover {
+        color: #fff;
+        
+    }
+}

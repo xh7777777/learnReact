@@ -1,0 +1,13 @@
+.search-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ccc;
+    padding: 30px 0;
+}
+
+.search-bar:hover {
+    outline: none;
+}
+
