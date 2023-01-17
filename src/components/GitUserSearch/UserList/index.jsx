@@ -10,13 +10,31 @@ function Card({userInfo}) {
         </div>
     )
 }
-function UserList({userInfo}) {
-  const cardList = userInfo.map((item,index) => {
+function UserList({userInfo,searchState}) {
+  const cardList = searchState.userInfo.map((item,index) => {
     return <Card userInfo={item} key={index}></Card>
   })
+  function resState() {
+    if(searchState.firstSearch) {
+      return (
+        <h1>请输入名字搜索！</h1>
+      )
+    } else if(searchState.loading) {
+      return (
+        <h1>加载中...</h1>
+      )
+    } else if(searchState.error) {
+      return (
+        <h1>出错啦</h1>
+      )
+    } else {
+      return cardList
+    }
+  }
+
   return (
     <div className='user-list'>
-        {cardList}
+        {resState()}
     </div>
   )
 }

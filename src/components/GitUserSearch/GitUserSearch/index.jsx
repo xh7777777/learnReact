@@ -4,11 +4,17 @@ import UserList from '../UserList'
 import './index.css'
 function GitUserSearch() {
   const [userInfo,setUserInfo] = useState([])
-  console.log(userInfo)
+  const [searchState,setSearchState] = useState({
+    firstSearch: true,
+    loading:false,
+    userInfo:[],
+    error:false
+  })
   return (
     <div className='git-search'>
-        <Search getUser={(user)=> setUserInfo(user)}></Search>
-        <UserList userInfo={userInfo}></UserList>
+        <Search getUser={(user)=> setUserInfo(user)} searchState={searchState} 
+        setSearchState={setSearchState}></Search>
+        <UserList userInfo={userInfo} searchState={searchState}></UserList>
     </div>
   )
 }
