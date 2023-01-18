@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import './index.css'
 function ProgressBar({stepNum}) {
+    if(!stepNum) {
+        stepNum = 3
+    }
     const [preDis,setPreDis] = useState(true)
     const [nextDis,setNextDis] = useState(false)
     const [currentWidth,setCurrentWidth] = useState(0)

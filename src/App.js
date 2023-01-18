@@ -1,9 +1,9 @@
 import './App.css';
-import GitUserSearch from './components/GitUserSearch/GitUserSearch'
+import DemoRouter from './components/DemoRouter';
 function App() {
   return (
     <div className="App">
-      <GitUserSearch/>
+      <DemoRouter/>
     </div>
   );
 }

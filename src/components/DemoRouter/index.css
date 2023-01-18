@@ -1,0 +1,25 @@
+.demo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.demo-list .list-item {
+    list-style-type: none;
+    max-width: 200px;
+    background-color: blanchedalmond;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.demo-area {
+    background-color:blanchedalmond;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 60vw;
+}
