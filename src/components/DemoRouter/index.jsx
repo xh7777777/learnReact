@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes, Link, Outlet } from 'react-router-dom'
 import ProgressBar from '../ProgressBar'
-import RippleButton from '../RippleButton'
 import GitUserSearch from '../GitUserSearch/GitUserSearch'
 import HiddenSearch from '../HiddenSearch'
 import DarkModeDemo from '../DarkMode'
+import Draggle from '../Draggle'
+import AwesomeInput from '../AwesomeInput'
 import { Button } from 'antd'
 import './index.css'
 function DemoRouter() {
@@ -16,10 +17,11 @@ function DemoRouter() {
             <Route path='/'></Route>
             <Route path='/demo' element={<DemoList></DemoList>}>
                 <Route path='/demo/progressBar' element={<ProgressBar stepNum={4}/>}></Route>
-                <Route path='/demo/rippleButton' element={<RippleButton/>}></Route>
                 <Route path='/demo/gitUserSearch' element={<GitUserSearch/>}></Route>
                 <Route path='/demo/hiddenSearch' element={<HiddenSearch/>}></Route>
                 <Route path='/demo/darkMode' element={<DarkModeDemo/>}></Route>
+                <Route path='/demo/draggle' element={<Draggle/>}></Route>
+                <Route path='/demo/input' element={<AwesomeInput/>}></Route>
             </Route>
         </Routes>
     </BrowserRouter>
@@ -36,9 +38,6 @@ function DemoList() {
           <Link to='/demo/progressBar'><Button>前进条</Button></Link>
         </li>
         <li className='list-item'>
-        <Link to='/demo/rippleButton'><Button>波纹按钮</Button></Link>
-        </li>
-        <li className='list-item'>
           <Link to='/demo/gitUserSearch'><Button>git搜索</Button></Link>
         </li>
         <li className='list-item'>
@@ -46,6 +45,12 @@ function DemoList() {
         </li>
         <li className='list-item'>
           <Link to='/demo/darkMode'><Button>黑暗模式</Button></Link>
+        </li>
+        <li className='list-item'>
+          <Link to='/demo/draggle'><Button>拖拽案例</Button></Link>
+        </li>
+        <li className='list-item'>
+          <Link to='/demo/input'><Button>输入框</Button></Link>
         </li>
       </ul>
       <div className="demo-area">
